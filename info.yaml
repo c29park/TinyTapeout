@@ -7,12 +7,12 @@ project:
   language:     "Verilog"
   clock_hz:     25000000
   tiles:        "1x1"
-
+  top_module: "tt_um_chris_counter"
 # >>> These must be TOP-LEVEL (not under 'project') <<<
-top_module: "tt_um_chris_counter"
-source_files:
-  - "src/prog_counter8.v"
-  - "src/tt_um_chris_counter.v"
+
+  source_files:
+    - "src/prog_counter8.v"
+    - "src/tt_um_chris_counter.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
