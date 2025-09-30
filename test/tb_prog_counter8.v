@@ -4,12 +4,14 @@ module tb;
   reg [7:0] load_val=8'h00;
   wire [7:0] y_tri, q;
 
+  // DUT
   prog_counter8 dut (
     .clk(clk), .rst_n(rst_n), .en(en), .load(load),
     .load_val(load_val), .oe(oe), .y_tri(y_tri), .q(q)
   );
 
-  always #5 clk = ~clk;  // 100 MHz
+  // 100 MHz clock
+  always #5 clk = ~clk;
 
   initial begin
     $dumpfile("tb_prog_counter8.vcd"); $dumpvars(0, tb);
